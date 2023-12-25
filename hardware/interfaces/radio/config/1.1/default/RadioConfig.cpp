@@ -132,7 +132,7 @@ Return<void> RadioConfig::setPreferredDataModem(int32_t serial, uint8_t modemId)
 }
 
 Return<void> RadioConfig::setModemsConfig(int32_t serial, const ModemsConfig& modemsConfig) {
-    RadioResponseInfo info ={RadioResponseType::SOLICITED, serial, RadioError::NONE};
+    RadioResponseInfo info ={RadioResponseType::SOLICITED, serial, RadioError::INTERNAL_ERR};
 	if(modemsConfig.numOfLiveModems == 0){
 		info.error = RadioError::INVALID_ARGUMENTS;
 	}
